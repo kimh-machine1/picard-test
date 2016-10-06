@@ -3,20 +3,12 @@ experimental:
     version: 0.1
     executorType: docker
     containerInfo:
-      - image: ubuntu:14.04
+      - image: circleci/build-image:trusty-latest
         # specify cmd if image does not have a Command set already
         cmd: ["/bin/bash"]
     stages:
       build:
-        workDir: /home/ubuntu/my-project
+        workDir: /home/ubuntu/picard-test
+
         steps:
-          #- type: checkout
-          ## Add an entry to /etc/hosts
-          - type: shell
-            shell: bash
-            command: echo 127.0.0.1 devhost | sudo tee -a /etc/hosts
-          # Create Postgres users and database, shows how to use a YAML heredoc
-          # to provide nicer formatting
-
-
-          #
+          - type: checkout
