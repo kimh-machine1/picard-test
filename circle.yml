@@ -4,7 +4,7 @@ experimental:
     executorType: docker
     containerInfo:
       #- image: circleci/build-image:trusty-latest
-      - image: kimh/picard-trusty
+      - image: kimh/picard-trusty:foo
 
     stages:
       build:
