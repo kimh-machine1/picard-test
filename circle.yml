@@ -4,8 +4,6 @@ experimental:
     executorType: docker
     containerInfo:
       - image: circleci/build-image:trusty-latest
-        # specify cmd if image does not have a Command set already
-        cmd: ["/bin/bash"]
     stages:
       build:
         workDir: /home/ubuntu/picard-test
