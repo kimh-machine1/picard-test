@@ -16,4 +16,7 @@ experimental:
           - type: shell
             shell: /bin/bash
             command: ls -la
+          - type: shell
+            shell: /bin/bash
+            command: pwd
 
