@@ -12,7 +12,7 @@ experimental:
         workDir: /home/ubuntu/picard-foo
 
         steps:
-          - type: checkout
+          #- type: checkout
           - type: shell
             shell: /bin/bash
             command: ls -la
