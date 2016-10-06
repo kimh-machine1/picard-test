@@ -1,3 +1,23 @@
+#experimental:
+#  picard:
+#    version: 0.1
+#    executorType: docker
+#    containerInfo:
+#      - image: circleci/build-image:trusty-latest
+#
+#    stages:
+#      build:
+#        parallel: 1
+#        workDir: /home/ubuntu/picard-test
+#        environment:
+#          CIRCLE_TEST_REPORTS: /tmp/test-reports
+#          CIRCLE_ARTIFACTS: /tmp/artifacts
+#
+#        steps:
+#          - type: checkout
+#          - type: add-ssh-keys
+#          - type: shell
+#            shell: /bin/bash
 experimental:
   picard:
     version: 0.1
@@ -15,7 +35,6 @@ experimental:
 
         steps:
           - type: checkout
-          - type: add-ssh-keys
           - type: shell
             shell: /bin/bash
             command: uptime
