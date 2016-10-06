@@ -6,12 +6,11 @@ experimental:
       - image: circleci/build-image:trusty-latest
     stages:
       build:
+        parallel: 2
         workDir: /home/ubuntu/picard-test
 
         steps:
           - type: checkout
-
-        steps:
           - type: shell
             shell: /bin/bash
             command: ls -la
