@@ -6,14 +6,6 @@ experimental:
       - image: ubuntu:14.04
         # specify cmd if image does not have a Command set already
         cmd: ["/bin/bash"]
-      - image: mongo:2.6.8
-        cmd: [mongod, --smallfiles]
-      - image: postgres:9.4.1
-        # some containers require environment variables
-        env:
-          - POSTGRES_USER=root
-      - image: redis:2.8.19
-      - image: rabbitmq:3.5.4
     stages:
       build:
         workDir: /home/ubuntu/my-project
