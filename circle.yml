@@ -15,7 +15,7 @@ experimental:
           - type: checkout
           - type: shell
             shell: /bin/bash
-            command: ls -la
+            command: ls -la /home/ubuntu
           - type: shell
             shell: /bin/bash
             command: pwd
