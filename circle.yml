@@ -9,10 +9,10 @@ experimental:
     stages:
       build:
         #parallel: 2
-        workDir: /home/ubuntu/picard-foo
+        workDir: /home/ubuntu/picard-test
 
         steps:
-          #- type: checkout
+          - type: checkout
           - type: shell
             shell: /bin/bash
             command: ls -la
