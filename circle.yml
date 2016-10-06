@@ -5,7 +5,7 @@ experimental:
     containerInfo:
       #- image: circleci/build-image:trusty-latest
       - image: kimh/picard-alpine
-      - cmd: /bin/
+        cmd: /bin/bash
     stages:
       build:
         #parallel: 2
