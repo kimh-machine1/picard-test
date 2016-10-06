@@ -9,7 +9,7 @@ experimental:
     stages:
       build:
         #parallel: 2
-        workDir: /home/ubuntu
+        workDir: /home/ubuntu/picard-test
 
         steps:
           - type: checkout
