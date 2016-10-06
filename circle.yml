@@ -13,7 +13,7 @@ experimental:
           #- type: checkout
           ## Add an entry to /etc/hosts
           - type: shell
-            shell: /bin/bash
+            shell: bash
             command: echo 127.0.0.1 devhost | sudo tee -a /etc/hosts
           # Create Postgres users and database, shows how to use a YAML heredoc
           # to provide nicer formatting
