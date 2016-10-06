@@ -15,7 +15,7 @@ experimental:
           - type: checkout
           - type: shell
             shell: /bin/bash
-            command: ls -la
+            command: ls -la && pwd
           - type: shell
             shell: /bin/bash
             command: pwd
