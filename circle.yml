@@ -1,0 +1,70 @@
+experimental:
+  picard:
+    version: 0.1
+    executorType: docker
+    containerInfo:
+      - image: ubuntu:14.04
+        # specify cmd if image does not have a Command set already
+        cmd: ["/bin/bash"]
+      - image: mongo:2.6.8
+        cmd: [mongod, --smallfiles]
+      - image: postgres:9.4.1
+        # some containers require environment variables
+        env:
+          - POSTGRES_USER=root
+      - image: redis:2.8.19
+      - image: rabbitmq:3.5.4
+    stages:
+      build:
+        workDir: /home/ubuntu/my-project
+        steps:
+          - type: checkout
+          # Add an entry to /etc/hosts
+          - type: shell
+            shell: /bin/bash
+            command: echo 127.0.0.1 devhost | sudo tee -a /etc/hosts
+          # Create Postgres users and database, shows how to use a YAML heredoc
+          # to provide nicer formatting
+          - type: shell
+            shell: /bin/bash
+            command: |
+              sudo -u root createuser -h localhost --superuser ubuntu &&
+              sudo createdb -h localhost test_db
+          # Run tests, demonstrates using a larger script as the test command
+          # along with additional environment variables
+          - type: shell
+            shell: /bin/bash
+            command: |
+                set -exu
+                mkdir -p /tmp/test-results
+                TESTFILES=$(find ./test -name 'test_*.clj' | sort | awk "NR % ${CIRCLE_NODE_TOTAL} == ${CIRCLE_NODE_INDEX}")
+                if [ -z "${TESTFILES}" ]
+                then
+                    echo "misconfigured parallelism"
+                    exit 1
+                else
+                    run-tests.sh ${TESTFILES}
+                    cp out/tests/*.xml /tmp/test-results/
+                fi
+
+            environment:
+              SSH_TARGET: "localhost"
+              TEST_ENV: "linux"
+
+          # Create deployable artifacts
+          - type: shell
+            shell: /bin/bash
+            command: |
+              set -exu
+              mkdir -p /tmp/artifacts
+              create_jars.sh ${CIRCLE_BUILD_NUM}
+              cp *.jar /tmp/artifacts
+
+          # Save artifacts
+          - type: artifacts-store
+            path: /tmp/artifacts
+            destination: build
+
+          # Upload test results
+          - type: test-results-store
+            path: /tmp/test-results
