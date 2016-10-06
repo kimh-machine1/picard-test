@@ -5,9 +5,10 @@ experimental:
     containerInfo:
       #- image: circleci/build-image:trusty-latest
       - image: kimh/picard-alpine
+      - cmd: /bin/
     stages:
       build:
-        parallel: 2
+        #parallel: 2
         workDir: /home/ubuntu/picard-test
 
         steps:

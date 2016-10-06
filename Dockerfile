@@ -1,2 +1,3 @@
-from alpine:latest
-run mkdir -p /home/ubuntu/picard-test
+FROM gliderlabs/alpine
+RUN apk-install bash
+RUN mkdir -p /home/ubuntu/picard-test
