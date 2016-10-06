@@ -3,7 +3,8 @@ experimental:
     version: 0.1
     executorType: docker
     containerInfo:
-      - image: circleci/build-image:trusty-latest
+      #- image: circleci/build-image:trusty-latest
+      - image: kimh/picard-alpine
     stages:
       build:
         parallel: 2
