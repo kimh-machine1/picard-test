@@ -10,6 +10,8 @@ experimental:
 
         steps:
           - type: checkout
+
+        steps:
           - type: shell
             shell: /bin/bash
             command: ls -la
