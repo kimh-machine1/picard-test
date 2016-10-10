@@ -11,10 +11,10 @@ experimental:
         workDir: /home/ubuntu/picard-foo
 
         steps:
-          - type: shell
-            shell: /bin/bash
-            name: create picard-foo directory before checkout
-            command: mkdir -p /home/ubuntu/picard-foo
+          #- type: shell
+          #  shell: /bin/bash
+          #  name: create picard-foo directory before checkout
+          #  command: mkdir -p /home/ubuntu/picard-foo
  
           - type: checkout
 
