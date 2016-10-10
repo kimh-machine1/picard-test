@@ -12,7 +12,7 @@ experimental:
 
         steps:
           - type: shell
-            shell: /bin/bash
+            pwd: /tmp
             name: create picard-foo directory before checkout
             command: mkdir -p /home/ubuntu/picard-foo
 
