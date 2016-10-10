@@ -3,12 +3,12 @@ experimental:
     executorType: docker
     containerInfo:
       #- image: circleci/build-image:trusty-latest
-      - image: kimh/picard-trusty:foo
+      - image: kimh/picard-trusty:2250
 
     stages:
       build:
         #parallel: 2
-        workDir: /home/ubuntu/picard-foo
+        workDir: /home/ubuntu/picard-test
 
         steps:
           #- type: shell
@@ -19,7 +19,5 @@ experimental:
           - type: checkout
 
           - type: shell
-            name: create picard-foo directory before checkout
+            name: create picard-test directory before checkout
             command: ls -la && pwd
-
-
