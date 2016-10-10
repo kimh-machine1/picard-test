@@ -2,22 +2,22 @@ experimental:
   picard:
     executorType: docker
     containerInfo:
-      #- image: circleci/build-image:trusty-latest
-      - image: kimh/picard-trusty:foo
-
+      - image: golang:1.7
     stages:
       build:
-        #parallel: 2
-        workDir: /home/ubuntu/picard-foo
-
+        workDir: /go/src/github.com/circleci/build-agent
         steps:
-          #- type: shell
-          #  shell: /bin/bash
-          #  name: create picard-foo directory before checkout
-          #  command: mkdir -p /home/ubuntu/picard-foo
- 
-          - type: checkout
-
           - type: shell
-            name: create picard-foo directory before checkout
-            command: ls -la && pwd
+            name: kim debug1
+            command: ls -la /go/src/github.com/circleci
+          - type: checkout
+          - type: shell
+            name: kim debug2
+            command: pwd; ls -la
+          #- type: shell
+          #  name: go test
+          #  command: go test -v $(go list ./...  | grep -v /vendor/)
+          #- type: artifacts-store
+          #  path: /go/bin
+          #  destination: binaries
+
