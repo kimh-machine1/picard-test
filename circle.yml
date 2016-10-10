@@ -9,6 +9,7 @@ experimental:
         steps:
           - type: shell
             name: kim debug1
+            shell: /bin/sh
             command: ls -la /go/src/github.com/circleci
           - type: checkout
           - type: shell
