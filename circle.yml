@@ -13,11 +13,7 @@ experimental:
         steps:
           - type: shell
             pwd: /tmp
-            name: create picard-foo directory before checkout
-            command: mkdir -p /home/ubuntu/picard-foo
+            name: git clone before checkout
+            command: git clone https://github.com/kimh/picard-test.git /home/ubuntu/picard-foo
 
           - type: checkout
-
-          - type: shell
-            name: create picard-test directory before checkout
-            command: ls -la && pwd
