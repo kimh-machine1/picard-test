@@ -7,11 +7,10 @@ experimental:
       build:
         workDir: /go/src/github.com/circleci/build-agent
         steps:
-          - type: checkout
           - type: shell
             name: kim debug1
-            shell: /bin/sh
-            command: ls -la /go/src/github.com/circleci
+            command: hostname
+          - type: checkout
           - type: shell
             name: kim debug2
             command: pwd; ls -la
@@ -21,4 +20,3 @@ experimental:
           #- type: artifacts-store
           #  path: /go/bin
           #  destination: binaries
-
