@@ -1,6 +1,5 @@
 experimental:
   picard:
-    version: 0.1
     executorType: docker
     containerInfo:
       #- image: circleci/build-image:trusty-latest
