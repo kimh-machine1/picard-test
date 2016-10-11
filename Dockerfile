@@ -5,3 +5,4 @@ RUN add-apt-repository -y ppa:git-core/ppa
 RUN apt-get update
 RUN apt-get -y install git
 RUN mkdir -p /home/ubuntu/picard-test
+RUN echo "aaa" > /home/ubuntu/picard-test/tan
