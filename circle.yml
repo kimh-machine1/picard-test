@@ -14,6 +14,7 @@ experimental:
           - type: shell
             pwd: /tmp
             name: git clone before checkout
-            command: ls -la /home && && mkdir -p /home/ubuntu/picard-test  && cd /home/ubuntu/picard-test && git clone https://github.com/kimh/picard-test.git . 2>&1
+            #command: ls -la /home && mkdir -p /home/ubuntu/picard-test  && cd /home/ubuntu/picard-test && git clone https://github.com/kimh/picard-test.git . 2>&1
+            command: ls -la /home && mkdir -p /home/ubuntu/picard-test
 
           - type: checkout
