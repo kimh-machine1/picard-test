@@ -3,17 +3,23 @@ experimental:
     executorType: docker
     containerInfo:
       #- image: circleci/build-image:trusty-latest
-      - image: kimh/picard-trusty:2551
+      - image: kimh/picard-trusty:4655
 
     stages:
       build:
         #parallel: 2
-        workDir: /home/ubuntu/picard-foo
+        workDir: /home/ubuntu/picard-test
 
         steps:
           - type: shell
             pwd: /tmp
             name: git clone before checkout
-            command: git clone https://github.com/kimh/picard-test.git /home/ubuntu/picard-foo
+            command: ls -la /home/ubuntu/picard-test
+
+          #- type: shell
+          #  pwd: /tmp
+          #  name: git clone before checkout
+          #  command: ls -la /home && && mkdir -p /home/ubuntu/picard-hoge  && cd /home/ubuntu/picard-hoge && git clone https://github.com/kimh/picard-test.git . 2>&1
+          #  #command: ls -la /home/ubuntu/picard-test
 
           - type: checkout
