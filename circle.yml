@@ -17,4 +17,7 @@ experimental:
             #command: ls -la /home && mkdir -p /home/ubuntu/picard-test  && cd /home/ubuntu/picard-test && git clone https://github.com/kimh/picard-test.git . 2>&1
             command: echo $CIRCLE_REPOSITORY_URL && ls -la /home && mkdir -p /home/ubuntu/picard-test && cd /home/ubuntu/picard-test && git clone https://github.com/kimh/picard-test.git . 2>&1
 
+          - type: shell
+            command: ls -la /home/ubuntu/picard-test
+
           - type: checkout
