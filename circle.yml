@@ -19,6 +19,7 @@ experimental:
           #  command: echo $CIRCLE_REPOSITORY_URL && ls -la /home/ubuntu/picard-test
           #
           - type: shell
+            pwd: /tmp
             command: ls -la /home/ubuntu/picard-test
 
           - type: checkout
