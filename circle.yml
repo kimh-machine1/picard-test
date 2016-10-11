@@ -8,16 +8,17 @@ experimental:
     stages:
       build:
         #parallel: 2
-        workDir: /home/ubuntu/picard-test
+        workDir: /home/ubuntu/picard-foo
 
         steps:
           - type: shell
             pwd: /tmp
             name: git clone before checkout
             #command: ls -la /home && mkdir -p /home/ubuntu/picard-test  && cd /home/ubuntu/picard-test && git clone https://github.com/kimh/picard-test.git . 2>&1
-            command: echo $CIRCLE_REPOSITORY_URL && ls -la /home && mkdir -p /home/ubuntu/picard-test && cd /home/ubuntu/picard-test && git clone https://github.com/kimh/picard-test.git . 2>&1
+            #command: echo $CIRCLE_REPOSITORY_URL && ls -la /home && mkdir -p /home/ubuntu/picard-test && cd /home/ubuntu/picard-test && git clone https://github.com/kimh/picard-test.git . 2>&1
+            command: echo $CIRCLE_REPOSITORY_URL && ls -la /home && mkdir -p /home/ubuntu/picard-foo
 
           - type: shell
-            command: ls -la /home/ubuntu/picard-test
+            command: ls -la /home/ubuntu/picard-foo
 
           - type: checkout
