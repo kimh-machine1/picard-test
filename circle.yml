@@ -15,5 +15,5 @@ experimental:
           - type: checkout
 
           - type: shell
-            command: echo 'SET hoge bar' | redis-cli
+            command: curl localhost:6379
 
