@@ -3,7 +3,7 @@ experimental:
     executorType: docker
     containerInfo:
       #- image: circleci/build-image:trusty-latest
-      - image: kimh/picard-trusty:latest
+      - image: kimh/picard-trusty:5740
 
     stages:
       build:
@@ -11,17 +11,6 @@ experimental:
         workDir: /home/ubuntu/picard-test
 
         steps:
-          #- type: shell
-          #  pwd: /tmp
-          #  name: git clone before checkout
-          #  #command: ls -la /home && mkdir -p /home/ubuntu/picard-test  && cd /home/ubuntu/picard-test && git clone https://github.com/kimh/picard-test.git . 2>&1
-          #  #command: echo $CIRCLE_REPOSITORY_URL && ls -la /home && mkdir -p /home/ubuntu/picard-test && cd /home/ubuntu/picard-test && git clone https://github.com/kimh/picard-test.git . 2>&1
-          #  command: echo $CIRCLE_REPOSITORY_URL && ls -la /home/ubuntu/picard-test
-          #
-          - type: shell
-            pwd: /tmp
-            command: ls -la /home/ubuntu/picard-test
-
           - type: checkout
 
           - type: shell
