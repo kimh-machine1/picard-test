@@ -3,7 +3,7 @@ experimental:
     executorType: docker
     containerInfo:
       #- image: circleci/build-image:trusty-latest
-      - image: kimh/picard-trusty:5727
+      - image: kimh/picard-trusty:latest
 
     stages:
       build:
