@@ -4,6 +4,7 @@ experimental:
     containerInfo:
       #- image: circleci/build-image:trusty-latest
       - image: kimh/picard-trusty:5740
+      - image: golang:1.6.2
 
     stages:
       build:
