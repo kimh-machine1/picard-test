@@ -4,7 +4,7 @@ experimental:
     containerInfo:
       #- image: circleci/build-image:trusty-latest
       - image: kimh/picard-trusty:5740
-      - image: golang:1.6.2
+      - image: redis:2.8.19
 
     stages:
       build:
@@ -15,5 +15,5 @@ experimental:
           - type: checkout
 
           - type: shell
-            command: ls -la /home/ubuntu/picard-test
+            command: echo 'SET hoge bar' | redis-cli
 
