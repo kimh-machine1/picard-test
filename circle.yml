@@ -10,9 +10,17 @@ experimental:
         steps:
           - type: shell
             pwd: /tmp
-            command: sleep 30
+            command: sleep 5 && echo hi
 
           - type: shell
             pwd: /tmp
-            command: sleep 30
+            command: sleep 5 && echo hi
+
+          - type: shell
+            pwd: /tmp
+            command: sleep 5 && echo hi
+
+          - type: shell
+            pwd: /tmp
+            command: sleep 5 && echo hi
 
