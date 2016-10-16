@@ -2,8 +2,8 @@ experimental:
   picard:
     executorType: docker
     containerInfo:
-      #- image: circleci/build-image:trusty-latest
-      - image: kimh/picard-trusty:5740
+      - image: circleci/build-image:trusty-latest
+      #- image: kimh/picard-trusty:5740
       #- image: redis:2.8.19
 
     stages:
