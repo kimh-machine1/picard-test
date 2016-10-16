@@ -12,7 +12,3 @@ experimental:
             pwd: /tmp
             command: sleep 30
 
-          - type: shell
-            pwd: /tmp
-            command: sleep 30
-
