@@ -17,6 +17,3 @@ experimental:
           - type: shell
             command: sleep 30
 
-          - type: shell
-            command: sleep 2000
-
