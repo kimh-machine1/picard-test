@@ -2,7 +2,7 @@ experimental:
   picard:
     executorType: docker
     containerInfo:
-      - image: circleci/build-image:trusty-latest
+      - image: kimh/picard-trusty:5740
 
     stages:
       build:
