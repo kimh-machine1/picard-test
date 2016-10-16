@@ -3,20 +3,12 @@ experimental:
     executorType: docker
     containerInfo:
       - image: circleci/build-image:trusty-latest
-      #- image: kimh/picard-trusty:5740
-      #- image: redis:2.8.19
 
     stages:
       build:
-        #parallel: 2
-        workDir: /home/ubuntu/picard-test
 
         steps:
-          - type: checkout
-  
           - type: shell
-            command: sleep 30
-
-          - type: shell
+            pwd: /tmp
             command: sleep 30
 
