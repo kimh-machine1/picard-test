@@ -2,7 +2,7 @@ experimental:
   picard:
     executorType: docker
     containerInfo:
-      - image: kimh/picard-trusty:5740
+      - image: circleci/build-image:ubuntu-14.04-XL
 
     stages:
       build:
