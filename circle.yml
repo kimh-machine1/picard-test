@@ -1,0 +1,13 @@
+experimental:
+  picard:
+    executorType: docker
+    containerInfo:
+      - image: kimh/picard-trusty:5740
+
+    stages:
+      build:
+
+        steps:
+          - type: shell
+            pwd: /tmp
+            command: echo hi
