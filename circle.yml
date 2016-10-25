@@ -18,4 +18,4 @@ experimental:
           - type: shell
             shell: /bin/bash
             pwd: /tmp
-            command: whoami; source ~/.bash_profile && ruby -v; whoami
+            command: source ~/.bash_profile && ruby -v;
