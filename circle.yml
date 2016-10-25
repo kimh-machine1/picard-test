@@ -10,4 +10,4 @@ experimental:
         steps:
           - type: shell
             pwd: /tmp
-            command: ls -la /opt/circleci
+            command: ruby -v
