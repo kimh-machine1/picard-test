@@ -4,6 +4,7 @@ experimental:
     containerInfo:
       #- image: circleci/build-image:ubuntu-14.04-XL
       - image: circleci/build-image:trusty-latest
+        user: ubuntu
 
     stages:
       build:
