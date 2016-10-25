@@ -9,5 +9,11 @@ experimental:
 
         steps:
           - type: shell
+            shell: /bin/bash
             pwd: /tmp
             command: ruby -v
+
+          - type: shell
+            shell: /bin/bash
+            pwd: /tmp
+            command: source ~/.bash_profile && ruby -v
