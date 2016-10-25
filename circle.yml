@@ -13,7 +13,7 @@ experimental:
           - type: shell
             shell: /bin/bash
             pwd: /tmp
-            command: ruby -v
+            command: whoami
 
           - type: shell
             shell: /bin/bash
