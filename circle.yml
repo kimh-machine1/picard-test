@@ -3,7 +3,7 @@ experimental:
     executorType: docker
     containerInfo:
       #- image: circleci/build-image:ubuntu-14.04-XL
-      - golang:1.7
+      - image: golang:1.7
 
     stages:
       build:
