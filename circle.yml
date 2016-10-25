@@ -2,8 +2,7 @@ experimental:
   picard:
     executorType: docker
     containerInfo:
-      #- image: circleci/build-image:ubuntu-14.04-XL
-      - image: golang:1.7
+      - image: circleci/build-image:ubuntu-14.04-XL
 
     stages:
       build:
@@ -11,4 +10,4 @@ experimental:
         steps:
           - type: shell
             pwd: /tmp
-            command: echo $FOO
+            command: ls -la /opt/circleci
