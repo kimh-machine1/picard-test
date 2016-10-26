@@ -5,7 +5,7 @@ experimental:
       #- image: circleci/build-image:ubuntu-14.04-XL
       - image: circleci/build-image:trusty-latest
         env:
-          - BASH_ENV="/home/ubuntu/.circlerc"
+          - BASH_ENV="/home/ubuntu/.bashrc"
       #- image: circleci/build-image:ubuntu-14.04-XL-781-14bf69a
 
     stages:
