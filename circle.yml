@@ -4,6 +4,8 @@ experimental:
     containerInfo:
       #- image: circleci/build-image:ubuntu-14.04-XL
       - image: circleci/build-image:trusty-latest
+        env:
+          - BASH_ENV="/home/ubuntu/.circlerc"
       #- image: circleci/build-image:ubuntu-14.04-XL-781-14bf69a
 
     stages:
@@ -11,17 +13,17 @@ experimental:
 
         steps:
           - type: shell
-            #shell: /bin/bash --login
+            shell: /bin/bash 
             #pwd: /tmp
             command: ruby --version
 
           - type: shell
-            shell: /bin/bash --login
+            shell: /bin/bash
             #pwd: /tmp
             command: pwd
 
           - type: shell
-            shell: /bin/bash --login
+            shell: /bin/bash
             #pwd: /tmp
             command: printenv PATH
 
