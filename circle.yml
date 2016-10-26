@@ -16,7 +16,9 @@ experimental:
             shell: /bin/bash 
             #pwd: /tmp
             command: ruby --version
-
+            env:
+              - BASH_ENV="/home/ubuntu/.bashrc"
+ 
           - type: shell
             shell: /bin/bash
             #pwd: /tmp
