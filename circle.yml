@@ -11,17 +11,17 @@ experimental:
 
         steps:
           - type: shell
-            shell: /bin/bash
+            shell: /bin/bash --login
             #pwd: /tmp
             command: ruby --version
 
           - type: shell
-            shell: /bin/bash
+            shell: /bin/bash --login
             #pwd: /tmp
             command: pwd
 
           - type: shell
-            shell: /bin/bash
+            shell: /bin/bash --login
             #pwd: /tmp
             command: printenv PATH
 
