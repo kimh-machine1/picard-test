@@ -15,7 +15,7 @@ experimental:
           - type: shell
             shell: /bin/bash 
             #pwd: /tmp
-            command: ruby --version
+            command: printenv BASH_ENV
             env:
               - BASH_ENV="/home/ubuntu/.bashrc"
  
