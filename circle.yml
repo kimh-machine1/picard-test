@@ -3,8 +3,8 @@ experimental:
     executorType: docker
     containerInfo:
       #- image: circleci/build-image:ubuntu-14.04-XL
-      #- image: circleci/build-image:trusty-latest
-      - image: circleci/build-image:ubuntu-14.04-XL-781-14bf69a
+      - image: circleci/build-image:trusty-latest
+      #- image: circleci/build-image:ubuntu-14.04-XL-781-14bf69a
 
     stages:
       build:
