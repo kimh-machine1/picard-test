@@ -12,15 +12,15 @@ experimental:
         steps:
           - type: shell
             shell: /bin/bash
-            pwd: /tmp
+            #pwd: /tmp
             command: whoami
 
           - type: shell
             shell: /bin/bash
-            pwd: /tmp
+            #pwd: /tmp
             command: pwd
 
           - type: shell
             shell: /bin/bash
-            pwd: /tmp
+            #pwd: /tmp
             command: printenv PATH
