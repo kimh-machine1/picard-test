@@ -8,6 +8,6 @@ experimental:
       build:
 
         steps:
-          - checkout
+          - type: checkout
           - type: shell
-            command: ls -la
+            command: pwd; ls -la
