@@ -10,4 +10,4 @@ experimental:
         steps:
           - type: shell
             pwd: /tmp
-            command: echo hi
+            command: echo this is pr
