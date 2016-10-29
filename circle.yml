@@ -6,8 +6,9 @@ experimental:
 
     stages:
       build:
-
+        workDir: /home/ubuntu/picard-test
         steps:
+          - type: checkout
           - type: shell
-            pwd: /tmp
-            command: echo hi
+            command: pwd; ls -la
+
