@@ -6,7 +6,6 @@ experimental:
 
     stages:
       build:
-	workDir: /home/ubuntu/picard-test
 
         steps:
           - type: checkout
