@@ -10,4 +10,4 @@ experimental:
         steps:
           - type: shell
             pwd: /tmp
-            command: echo this is pr 1
+            command: echo $CIRCLE_BRANCH
