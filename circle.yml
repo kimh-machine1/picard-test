@@ -10,4 +10,4 @@ experimental:
         steps:
           - type: shell
             pwd: /tmp
-            command: sleep 100 && echo hi
+            command: sleep 10 && echo hi
