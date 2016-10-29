@@ -8,6 +8,6 @@ experimental:
       build:
 
         steps:
+          - checkout
           - type: shell
-            pwd: /tmp
-            command: echo $CIRCLE_BRANCH
+            command: ls -la
