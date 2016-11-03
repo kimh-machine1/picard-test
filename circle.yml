@@ -10,4 +10,4 @@ experimental:
         steps:
           - type: shell
             pwd: /tmp
-            command: echo pr2
+            command: echo $FOO
