@@ -2,12 +2,15 @@ experimental:
   picard:
     executorType: docker
     containerInfo:
-      - image: kimh/picard-trusty:5740
+      - image: circleci/build-image:ubuntu-14.04-XL-783-8f4b56f
 
     stages:
       build:
 
+        workDir: /home/ubuntu/picard-test
+
         steps:
+          - type: checkout
           - type: shell
             pwd: /tmp
-            command: echo $FOO
+            command: echo $HOME; cat ~/.ssh/id_rsa | cut -c 1-60
