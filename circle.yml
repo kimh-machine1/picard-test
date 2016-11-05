@@ -10,5 +10,5 @@ experimental:
         steps:
           - type: shell
             pwd: /tmp
-            command: echo ef
+            command: echo hoge
 
