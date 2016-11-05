@@ -10,4 +10,5 @@ experimental:
         steps:
           - type: shell
             pwd: /tmp
-            command: echo foo
+            command: echo ef
+
