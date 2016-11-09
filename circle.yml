@@ -8,6 +8,8 @@ experimental:
       build:
 
         steps:
+          - type: checkout
+          - type: add-ssh-keys
           - type: shell
             pwd: /tmp
             command: echo trump 
