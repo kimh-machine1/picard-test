@@ -10,5 +10,5 @@ experimental:
         steps:
           - type: shell
             pwd: /tmp
-            command: echo trump
+            command: echo trump 
 
