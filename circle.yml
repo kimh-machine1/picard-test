@@ -6,11 +6,8 @@ containerInfo:
 stages:
   build:
 
-    #workDir: ~/picard-test
-
     parallel: 1
     steps:
-      #- type: checkout
       - type: shell
         pwd: /tmp
         command: echo hi
