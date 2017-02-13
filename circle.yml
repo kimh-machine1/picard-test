@@ -1,5 +1,6 @@
 version: 2
 executorType: docker
+verbose: true
 containerInfo:
   - image: kimh/picard-trusty:5740
 
