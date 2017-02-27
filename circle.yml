@@ -12,3 +12,4 @@ stages:
       - type: shell
         pwd: /tmp
         command: echo hi
+
