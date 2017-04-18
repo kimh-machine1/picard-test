@@ -10,6 +10,7 @@ jobs:
       - checkout
       - run: ls -la
       - run: echo this is pr foo yo
+      - run: cat circle.yml
 
 
 
