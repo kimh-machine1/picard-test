@@ -9,7 +9,7 @@ jobs:
       - run: rm $(which git)
       - checkout
       - run: ls -la
-      - run: echo this is pr foo
+      - run: echo this is pr foo yo
 
 
 
