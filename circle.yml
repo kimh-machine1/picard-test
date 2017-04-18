@@ -1,13 +1,15 @@
 version: 2
-executorType: docker
-containerInfo:
-  - image: kimh/picard-trusty:5740
-
-stages:
+jobs:
   build:
+    docker:
+      - image: kimh/picard-trusty:5740
 
+    working_directory: /tmp/code
     steps:
-      - type: shell
-        pwd: /tmp
-        command: echo hello
+      - run: rm $(which git)
+      - checkout
+      - run: ls -la
+
+
+
 
