@@ -11,7 +11,7 @@ jobs:
       - run: ls -la
       - run: echo this is pr foo yo
       - run: cat circle.yml
-      - run: cat .git/refs/remotes/origin/pr/17
+      - run: cat .git/refs/remotes/origin/pr-17
 
 
 
