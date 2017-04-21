@@ -9,6 +9,5 @@ jobs:
       - run: rm $(which git)
       - checkout
       - run: ls -la
-      - run: echo this is pr foo yo
       - run: cat circle.yml
       - run: ls .git/refs/remotes/origin/pr*
