@@ -10,4 +10,5 @@ jobs:
       - checkout
       - run: ls -la
       - run: cat circle.yml
+      - run: echo this is pr 21
       - run: ls .git/refs/remotes/origin/pr*
